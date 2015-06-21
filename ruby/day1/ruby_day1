@@ -1,0 +1,18 @@
+
+#ruby API : http://api.rubyonrails.org/
+
+#book : http://ruby-doc.com/docs/ProgrammingRuby/
+
+* puts "hello, world."
+
+* "Hello, Ruby".scan(/\w+/).index("Ruby")
+
+* x = 0
+
+while x < 10
+	x = x + 1
+	puts "Romain"
+end
+
+
+
