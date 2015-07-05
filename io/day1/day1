@@ -1,0 +1,20 @@
+1 + 1 => ok
+1 + "one" => exception => Strongly typed
+
+true and 0 => true
+true and "" => true
+true and nil => false
+
+Vehicle := Object clone
+Vehicle matricule := method("matricule" println)
+Vehicle slotNames
+
+
+mycar := Vehicle clone
+mycar matricule
+mycar matricule = method("123456ABC" println)
+mycar matricule
+mycar color = "red" => exception
+mycar color := "red"
+mycar color ::= "red" => add setter slot
+
