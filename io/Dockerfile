@@ -13,4 +13,10 @@ RUN wget http://iobin.suspended-chord.info/linux/iobin-linux-x64-deb-current.zip
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+WORKDIR /
+RUN mkdir scripts
+
+ADD day1 scripts/
+ADD day2 scripts/
+
 #ENTRYPOINT io
