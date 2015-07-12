@@ -25,9 +25,10 @@ Matrice toFile := method(file,
 	self theList foreach(x,v,
 		v foreach(y,n,
 			ns := n asString
-			f write(ns + " ")
+			f write(ns)
+			f write(" ")
 		)
-		f write('\n')
+		f write("\n")
 	)
 	f close
 )
@@ -35,8 +36,9 @@ Matrice fromFile := method(file,
 	r := list()
 	f := File with(file)
 	f openForReading
-	col := f readLine split map(v, v toNumber)
-	r append(col)
+	f foreachLine(l,
+		r append(l split map(v, v asNumber))
+	)
 	f close	
 	self theList := r
 )
@@ -48,3 +50,7 @@ myMatrice get(1, 1) println
 myMatrice get(0, 0) println
 myMatrice toFile("foo.txt")
 
+myMatrice2 := Matrice clone
+myMatrice2 fromFile("foo.txt")
+myMatrice2 get(1, 1) println
+myMatrice2 get(0, 0) println
