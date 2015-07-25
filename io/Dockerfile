@@ -18,5 +18,6 @@ RUN mkdir scripts
 
 ADD day1 scripts/
 ADD day2 scripts/
+ADD day3 scripts/
 
 #ENTRYPOINT io

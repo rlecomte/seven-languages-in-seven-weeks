@@ -1,0 +1,24 @@
+#!/usr/local/bin/io
+
+Builder := Object clone
+
+Builder forward := method(
+	s := "\t"
+	writeln(call sender type != "Object")
+	#while(call sender type != "Object", s = s + "\t")
+	writeln(s, "<", call message name, ">")
+	call message arguments foreach(
+		arg,
+		content := self doMessage(arg);
+		if(content type == "Sequence", writeln(content))
+	)
+	writeln(s, "</", call message name, ">")
+)
+
+Builder ul(
+	li(a("a"), a("b"), b("c")),
+	li("Lua"),
+	li("Javascript")
+)
+
+
