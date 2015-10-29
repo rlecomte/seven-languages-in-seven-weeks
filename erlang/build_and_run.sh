@@ -7,4 +7,4 @@ SCRIPTPATH=`dirname $SCRIPT`
 
 docker build -t rlecomte/erlang:latest .
 
-docker run -v $SCRIPTPATH/day1:/scripts/ -ti rlecomte/erlang:latest
+docker run -v $SCRIPTPATH/day2:/scripts/ -ti rlecomte/erlang:latest
