@@ -17,3 +17,4 @@ ADD day3 scripts/
 
 ENTRYPOINT ["gprolog"]
 
+
